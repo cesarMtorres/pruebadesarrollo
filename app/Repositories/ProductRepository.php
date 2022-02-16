@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Interfaces\ProductRepositoryInterface;
 use App\Models\Product;
 
-class EntryRepository implements ProductRepositoryInterface
+class ProductRepository implements ProductRepositoryInterface
 {
   protected $product;
 
@@ -16,12 +16,12 @@ class EntryRepository implements ProductRepositoryInterface
 
   public function getAllProduct()
   {
-    return $this->entry->all();
+    return $this->product->paginate(10); // paginate api
   }
 
   public function getProductById($entryId)
   {
-    return $this->entry->findOrFail($entryId);
+    return $this->product->findOrFail($entryId);
   }
 }
 

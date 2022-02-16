@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Http\Interfaces\SaleRepositoryInterface;
+use App\Interfaces\SaleRepositoryInterface;
 use App\Models\Sale;
 
 class SaleRepository implements SaleRepositoryInterface
@@ -16,10 +16,10 @@ class SaleRepository implements SaleRepositoryInterface
 
   public function getAllSale()
   {
-    return $this->sale->all();
+    return $this->sale->paginate(10);
   }
 
-  public function getSaleByCustomer($customerId)
+  public function getSaleOrderByCustomer($customerId)
   {
     return $this->sale->where('custId',$customerId);
   }
