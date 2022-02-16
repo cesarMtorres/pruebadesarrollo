@@ -26,7 +26,7 @@ class ProductController extends Controller
 
   public function show(Request $request): JsonResponse
   {
-       $productId = $request->route('id');
+       $productId = $request->route('custId');
 
         return response()->json([
             'data' => $this->productRepository->getProductById($productId)
