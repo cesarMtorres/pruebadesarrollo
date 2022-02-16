@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\SaleController;
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +21,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// product
 
-Route::get('product', [ProductController::class, 'index']);
-Route::get('product/{id}', [ProductController::class,'show']);
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/products', 'index');
+    Route::get('/products/{id}', 'show');
+});
 
 // salesOrder
-Route::get('sales', [SaleController::class, 'index']);
-Route::get('sales/{customer}', [SaleController::class,'show']);
+
+Route::controller(SaleController::class)->group(function () {
+    Route::get('/sales/order', 'index');
+    Route::get('/sales/{custId}', 'show');
+});
+
+// Customer
+
+Route::controller(CustomerController::class)->group(function () {
+    Route::get('/customers', 'index');
+    Route::get('/customers/{custId}', 'show');
+    Route::put('customers/{custId}', 'update');
+});
