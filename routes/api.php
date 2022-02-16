@@ -40,5 +40,5 @@ Route::controller(SaleController::class)->group(function () {
 Route::controller(CustomerController::class)->group(function () {
     Route::get('/customers', 'index');
     Route::get('/customers/{custId}', 'show');
-    Route::put('customers/{custId}', 'update');
+    Route::put('/customers/{custId}', 'update');
 });
