@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Interfaces\ProductRepositoryInterface;
+use App\Interfaces\ProductRepositoryInterface;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -19,7 +19,7 @@ class ProductController extends Controller
     public function index(): JsonResponse
     {
         return response()->json([
-            'data' => $this->entryRepository->getAllEntry()
+            'data' => $this->productRepository->getAllProduct()->paginate(15)
         ]);
     }
 
