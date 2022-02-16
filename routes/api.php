@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('product', [ProductController::class, 'index']);
+Route::get('product/{id}', [ProductController::class,'show']);
+
+// salesOrder
+Route::get('sales', [SaleController::class, 'index']);
+Route::get('sales/{customer}', [SaleController::class,'show']);
