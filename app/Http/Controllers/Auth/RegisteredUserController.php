@@ -13,7 +13,6 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
-    protected $connection = 'mysqlocal';
     /**
      * Display the registration view.
      *
