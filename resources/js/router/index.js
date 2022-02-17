@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Sale from '../components/Sale.vue'
+import CustomerIndex from '../components/CustomerIndex.vue'
 
 const routes = [
     {
         path: '/dashboard',
-        name: 'sale',
-        component: sale
+        name: 'customer.index',
+        component: CustomerIndex
     }
 ];
 
