@@ -32,7 +32,7 @@ Route::controller(ProductController::class)->group(function () {
 
 Route::controller(SaleController::class)->group(function () {
     Route::get('/sales/order', 'index');
-    Route::get('/sales/{custId}', 'show');
+    Route::get('/sales/order/{custId}', 'show');
 });
 
 // Customer

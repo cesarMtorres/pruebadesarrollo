@@ -1,0 +1,13 @@
+2
+
+
+
+. Crear un webservice en Laravel, que pueda visualizar los productos con su respectiva categoría y proveedor. Adicionalmente deben crear los parámetros respectivos para poder filtrar por uno o más categorías y/o proveedores. Suma puntos si se tiene en cuenta que la api posea paginacion.
+
+* Crear otro webservice que permita obtener las compras (salesOrder)  de un cliente en específico (customer) con su respectivo detalle. Suma puntos si se tiene en cuenta que la api posea paginacion.
+
+* Crear un webservice que modifique la información mas relevante de cualquiera de las tablas del modelo de entidad relación que se mostrara a continuación. (Employee/Customer/Etc...)
+
+Se adjunta el esquema relacional de base de datos completo.
+
+La base de datos esta en MySQL y se llama northwind.sql (esta en la raíz del proyecto)

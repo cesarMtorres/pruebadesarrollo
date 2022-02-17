@@ -19,6 +19,7 @@ class SaleRepository implements SaleRepositoryInterface
     return $this->sale->paginate(10);
   }
 
+  // NOTA orderId
   public function getSaleOrderByCustomer($customerId)
   {
     return $this->sale->where('custId',$customerId);

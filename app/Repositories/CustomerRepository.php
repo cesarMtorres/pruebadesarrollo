@@ -21,12 +21,12 @@ class CustomerRepository implements CustomerRepositoryInterface
 
   public function getCustomerById($customerId)
   {
-    return $this->customer->findOrFail($customerId);
+    return $this->customer->where('custId',$customerId);
   }
 
   public function updateCustomer($customerId, array $newDetails)
   {
-      return $this->customer->where('id',$customerId)->update($newDetails);
+      return $this->customer->where('custId',$customerId)->update($newDetails);
   }
 
 }

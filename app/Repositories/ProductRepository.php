@@ -19,9 +19,9 @@ class ProductRepository implements ProductRepositoryInterface
     return $this->product->paginate(10); // paginate api
   }
 
-  public function getProductById($entryId)
+  public function getProductById($productId)
   {
-    return $this->product->findOrFail($entryId);
+    return $this->product->where('productId',$productId);
   }
 }
 
