@@ -13,8 +13,8 @@ class Sale extends Model
     protected $table = "SalesOrder";
 
     protected $searchable = [
-        'custId',
-        'orderId',
+      #  'custId',
+      #  'orderId',
         'shipName',
     ];
 }
